@@ -12,7 +12,7 @@ class User {
     this.userName = userName
   }
 }
-const demoUserName = 'demo@example.net'
+//const demoUserName =
 
 export default {
   methods: {
@@ -69,7 +69,7 @@ export default {
     authLogin: async function() {
       // Skip real login and set demo user, also save in storage
       if (!msalApp) {
-        user = new User('', { name: 'Demo User' }, demoUserName)
+        user = new User('', { name: 'Demo User' }, 'demo@example.net')
         localStorage.setItem('user', JSON.stringify(user))
         return
       }
